@@ -1,2 +1,3 @@
-@use './component/**';
-@use './page/**';
+@forward "./common";
+@forward "./component";
+@forward "./page";

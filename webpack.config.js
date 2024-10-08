@@ -1,26 +1,36 @@
 import { merge } from 'webpack-merge';
 import compression from './bundler/compression.js';
-import validation from './bundler/validation.js';
+// import validation from './bundler/validation.js';
 import bundling from './bundler/bundling.js';
 import unusedCheck from './bundler/unused-check.js';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default merge(
     {
-        entry: './src/ts/index.ts',
+        mode: process.env.NODE_ENV || 'development',
+        entry: ['./src/ts/app.ts', './src/scss/style.scss'],
         output: {
-            path: __dirname + '/dist',
-            filename: 'bundle.js',
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'js/bundle.js',
+            clean: true,
         },
-        module: {
-            rules: [{
-                test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            }],
+        resolve: {
+            extensions: ['.ts', '.js', '.scss'],
+            alias: {
+                '@ejs': path.resolve(__dirname, 'src/ejs'),
+                '@sass': path.resolve(__dirname, 'src/sass'),
+                '@ts': path.resolve(__dirname, 'src/ts'),
+                '@img': path.resolve(__dirname, 'src/img'),
+            }
         },
     },
-    compression,
-    validation,
+
     bundling,
-    unusedCheck
+    // compression,
+    // validation,
+    // unusedCheck
 );

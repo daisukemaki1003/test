@@ -1,0 +1,9 @@
+@use '../common/module' as *;
+@use '../common/config' as *;
+
+.index_page {
+    h1 {
+        font-size: 24px;
+        color: red;
+    }
+}

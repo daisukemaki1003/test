@@ -1,0 +1,131 @@
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve '/assets/js/bundle.js?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/js/bundle.js?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/Compilation.js:2109:28
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:908:13
+      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:333:22
+      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:512:22
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:150:10
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:775:25
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:992:8
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:1121:5
+  Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/Compilation.js:2109:28
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:908:13
+      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:333:22
+      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:512:22
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:150:10
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:775:25
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:992:8
+      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:1121:5
+  Module Error (from ./node_modules/html-loader/dist/cjs.js):
+  HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
+  ModuleError: Module Error (from ./node_modules/html-loader/dist/cjs.js):
+  HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
+      at Object.emitError (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModule.js:706:6)
+      at Object.loader (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/html-loader/dist/index.js:56:10)
+  
+  - Compilation.js:2109 
+    [sandbox-webpack]/[webpack]/lib/Compilation.js:2109:28
+  
+  - NormalModuleFactory.js:908 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:908:13
+  
+  
+  - NormalModuleFactory.js:333 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:333:22
+  
+  
+  - NormalModuleFactory.js:512 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:512:22
+  
+  - NormalModuleFactory.js:150 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:150:10
+  
+  - NormalModuleFactory.js:775 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:775:25
+  
+  - NormalModuleFactory.js:992 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:992:8
+  
+  - NormalModuleFactory.js:1121 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:1121:5
+  
+  - Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  
+  - ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  
+  - Compilation.js:2109 
+    [sandbox-webpack]/[webpack]/lib/Compilation.js:2109:28
+  
+  - NormalModuleFactory.js:908 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:908:13
+  
+  
+  - NormalModuleFactory.js:333 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:333:22
+  
+  
+  - NormalModuleFactory.js:512 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:512:22
+  
+  - NormalModuleFactory.js:150 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:150:10
+  
+  - NormalModuleFactory.js:775 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:775:25
+  
+  - NormalModuleFactory.js:992 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:992:8
+  
+  - NormalModuleFactory.js:1121 
+    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:1121:5
+  
+  - Module Error (from ./node_modules/html-loader/dist/cjs.js):
+  
+  - HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
+  
+  - ModuleError: Module Error (from ./node_modules/html-loader/dist/cjs.js):
+  
+  - HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
+  
+  - NormalModule.js:706 Object.emitError
+    [sandbox-webpack]/[webpack]/lib/NormalModule.js:706:6
+  
+  - index.js:56 Object.loader
+    [sandbox-webpack]/[html-loader]/dist/index.js:56:10
+  
+  - child-compiler.js:174 
+    [sandbox-webpack]/[html-webpack-plugin]/lib/child-compiler.js:174:18
+  
+  - Compiler.js:627 finalCallback
+    [sandbox-webpack]/[webpack]/lib/Compiler.js:627:5
+  
+  - Compiler.js:662 
+    [sandbox-webpack]/[webpack]/lib/Compiler.js:662:11
+  
+  - Compiler.js:1348 
+    [sandbox-webpack]/[webpack]/lib/Compiler.js:1348:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [sandbox-webpack]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1344 
+    [sandbox-webpack]/[webpack]/lib/Compiler.js:1344:33
+  
+  - Compilation.js:2925 finalCallback
+    [sandbox-webpack]/[webpack]/lib/Compilation.js:2925:11
+  
+  - Compilation.js:3238 
+    [sandbox-webpack]/[webpack]/lib/Compilation.js:3238:11
+  
+  
+</pre>

@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        // ECMAScriptのターゲットバージョン
+        "target": "es2020",
+        // 使用するモジュールシステム
+        "module": "esnext",
+        // コンパイル時に使用するライブラリ
+        "lib": [
+            "es2020",
+            "dom"
+        ],
+        // JSXのサポート設定 (Reactで使用)
+        "jsx": "react",
+        // ソースマップを出力するかどうか
+        "sourceMap": true,
+        // コンパイル後の出力ディレクトリ
+        "outDir": "./dist",
+        // ソースコードのルートディレクトリ
+        "rootDir": "./src",
+        // 厳格な型チェックを有効にする (strictモード)
+        "strict": true,
+        // モジュールの解決方法
+        "moduleResolution": "node",
+        // 相対パスの基準となるディレクトリ
+        "baseUrl": "src",
+        // ESモジュール互換のインポート/エクスポートをサポート
+        "esModuleInterop": true,
+        // デコレータの実験的サポート
+        "experimentalDecorators": true,
+        // デコレータにメタデータを付与する
+        "emitDecoratorMetadata": true,
+        // ライブラリチェックをスキップする
+        "skipLibCheck": true,
+        // ファイル名の大文字小文字の違いを強制的に統一
+        "forceConsistentCasingInFileNames": true
+    },
+    // コンパイルに含めるファイルやディレクトリ
+    "include": [
+        "src/**/*"
+    ],
+    // コンパイル対象外とするファイルやディレクトリ
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    // 保存時に自動で再コンパイルしない設定
+    "compileOnSave": false
+}
