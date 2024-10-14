@@ -5,9 +5,20 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
+import { metaPreprocessor } from './validation.js';
+import fs from 'fs';
+
 // パスの設定
 const __filename = fileURLToPath(import.meta.url);
 const projectRoot = path.resolve(path.dirname(__filename), '../');
+
+console.log(projectRoot);
+
+
+// EJSファイルを動的に取得
+const ejsPages = fs.readdirSync(path.resolve(projectRoot, 'src', 'ejs', 'pages'));
+
+console.log(ejsPages);
 
 export default {
     module: {
@@ -28,45 +39,33 @@ export default {
             // EJSローダー
             {
                 test: /\.ejs$/,
-                use: [{ loader: 'html-loader' }, { loader: 'template-ejs-loader' }],
+                use: [
+                    { loader: 'html-loader', options: { preprocessor: metaPreprocessor } },
+                    { loader: 'template-ejs-loader' },
+                ],
             },
 
             // 画像ローダー
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                loader: 'file',
-                // type: 'asset/resource',
-                // generator: {
-                //     filename: 'img/[name][ext]',  // 画像のみをimgフォルダに出力
-                // },
+                loader: 'file-loader',
             },
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
 
-        // CSSバンドル
-        new MiniCssExtractPlugin({
-            filename: 'css/style.css',
-        }),
-
-        // // 画像コピー
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(projectRoot, "src", "img"),
-        //             to: path.resolve(projectRoot, "assets", "img"),
-        //             globOptions: { ignore: ['**/.gitkeep'] },
-        //         }
-        //     ]
+        // // CSSバンドル
+        // new MiniCssExtractPlugin({
+        //     filename: 'assets/css/[name].style.css',
         // }),
 
         // EJSバンドル
-        new HtmlWebpackPlugin({
-            template: path.resolve(projectRoot, "src", "ejs", "index.ejs"),
-            filename: "index.html",
-            inject: false
-
-        }),
+        ...ejsPages.map(page => new HtmlWebpackPlugin({
+            // template: path.resolve(projectRoot, 'src', 'ejs', 'pages', page),
+            template: path.resolve(projectRoot, 'src', 'ejs', 'pages', 'index.ejs'),
+            // filename: page.replace('.ejs', '.html'),
+            filename: 'index.html',
+        })),
     ],
 }

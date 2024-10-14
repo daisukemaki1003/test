@@ -1,131 +1,117 @@
 Html Webpack Plugin:
 <pre>
   Error: Child compilation failed:
-  Module not found: Error: Can't resolve '/assets/js/bundle.js?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/js/bundle.js?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/Compilation.js:2109:28
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:908:13
-      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:333:22
-      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:512:22
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:150:10
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:775:25
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:992:8
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:1121:5
-  Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/Compilation.js:2109:28
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:908:13
-      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:333:22
-      at eval (eval at create (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:512:22
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:150:10
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:775:25
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:992:8
-      at /Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModuleFactory.js:1121:5
-  Module Error (from ./node_modules/html-loader/dist/cjs.js):
-  HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
-  ModuleError: Module Error (from ./node_modules/html-loader/dist/cjs.js):
-  HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
-      at Object.emitError (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/webpack/lib/NormalModule.js:706:6)
-      at Object.loader (/Users/makidaisuke/dev/workspace/sandbox-webpack/node_modules/html-loader/dist/index.js:56:10)
+  Module build failed (from ./node_modules/template-ejs-loader/lib/index.js):
+  ReferenceError: /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/html-webpack-plugin/default_index.ejs:5
+      3|   <head>
+      4|     <meta charset="utf-8">
+   >> 5|     <title><%= htmlWebpackPlugin.options.title %></title>
+      6|   </head>
+      7|   <body>
+      8|   </body>
   
-  - Compilation.js:2109 
-    [sandbox-webpack]/[webpack]/lib/Compilation.js:2109:28
+  htmlWebpackPlugin is not defined
+      at eval ("/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/html-webpack-plugin/default_index.ejs":12:26  )
+      at default_index (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/ejs/lib/ejs.js:703:17)
+      at Object.ejsLoader (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/template-ejs-loader/lib/index.js:  104:78)
+  ModuleBuildError: Module build failed (from ./node_modules/template-ejs-loader/lib/index.js):
+  ReferenceError: /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/html-webpack-plugin/default_index.ejs:5
+      3|   <head>
+      4|     <meta charset="utf-8">
+   >> 5|     <title><%= htmlWebpackPlugin.options.title %></title>
+      6|   </head>
+      7|   <body>
+      8|   </body>
   
-  - NormalModuleFactory.js:908 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:908:13
+  htmlWebpackPlugin is not defined
+      at eval ("/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/html-webpack-plugin/default_index.ejs":12:26  )
+      at default_index (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/ejs/lib/ejs.js:703:17)
+      at Object.ejsLoader (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/template-ejs-loader/lib/index.js:  104:78)
+      at processResult (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/webpack/lib/NormalModule.js:889:19)
+      at /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/webpack/lib/NormalModule.js:1030:5
+      at /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/loader-runner/lib/LoaderRunner.js:400:11
+      at /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/loader-runner/lib/LoaderRunner.js:252:18
+      at context.callback (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/loader-runner/lib/LoaderRunner.js  :124:13)
+      at Object.ejsLoader (/Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/template-ejs-loader/lib/index.js:  108:9)
   
+  - default_index.ejs":12 eval
+    [webpack-template]/[html-webpack-plugin]/default_index.ejs":12:26
   
-  - NormalModuleFactory.js:333 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:333:22
+  - ejs.js:703 default_index
+    [webpack-template]/[ejs]/lib/ejs.js:703:17
   
+  - index.js:104 Object.ejsLoader
+    [webpack-template]/[template-ejs-loader]/lib/index.js:104:78
   
-  - NormalModuleFactory.js:512 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:512:22
+  - ModuleBuildError: Module build failed (from ./node_modules/template-ejs-loader/lib/index.js):
   
-  - NormalModuleFactory.js:150 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:150:10
+  - ReferenceError: /Users/makidaisuke/Desktop/Workspace/webpack-template/node_modules/html-webpack-plugin/default_index.ejs:5
   
-  - NormalModuleFactory.js:775 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:775:25
+  - 3|   <head>
   
-  - NormalModuleFactory.js:992 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:992:8
+  - 4|     <meta charset="utf-8">
   
-  - NormalModuleFactory.js:1121 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:1121:5
+  - >> 5|     <title><%= htmlWebpackPlugin.options.title %></title>
   
-  - Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  - 6|   </head>
   
-  - ModuleNotFoundError: Module not found: Error: Can't resolve '/assets/css/style.css?123456789' in '/Users/makidaisuke/dev/workspace/sandbox-webpack/src/ejs'
+  - 7|   <body>
   
-  - Compilation.js:2109 
-    [sandbox-webpack]/[webpack]/lib/Compilation.js:2109:28
+  - 8|   </body>
   
-  - NormalModuleFactory.js:908 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:908:13
+  - htmlWebpackPlugin is not defined
   
+  - default_index.ejs":12 eval
+    [webpack-template]/[html-webpack-plugin]/default_index.ejs":12:26
   
-  - NormalModuleFactory.js:333 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:333:22
+  - ejs.js:703 default_index
+    [webpack-template]/[ejs]/lib/ejs.js:703:17
   
+  - index.js:104 Object.ejsLoader
+    [webpack-template]/[template-ejs-loader]/lib/index.js:104:78
   
-  - NormalModuleFactory.js:512 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:512:22
+  - NormalModule.js:889 processResult
+    [webpack-template]/[webpack]/lib/NormalModule.js:889:19
   
-  - NormalModuleFactory.js:150 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:150:10
+  - NormalModule.js:1030 
+    [webpack-template]/[webpack]/lib/NormalModule.js:1030:5
   
-  - NormalModuleFactory.js:775 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:775:25
+  - LoaderRunner.js:400 
+    [webpack-template]/[loader-runner]/lib/LoaderRunner.js:400:11
   
-  - NormalModuleFactory.js:992 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:992:8
+  - LoaderRunner.js:252 
+    [webpack-template]/[loader-runner]/lib/LoaderRunner.js:252:18
   
-  - NormalModuleFactory.js:1121 
-    [sandbox-webpack]/[webpack]/lib/NormalModuleFactory.js:1121:5
+  - LoaderRunner.js:124 context.callback
+    [webpack-template]/[loader-runner]/lib/LoaderRunner.js:124:13
   
-  - Module Error (from ./node_modules/html-loader/dist/cjs.js):
-  
-  - HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
-  
-  - ModuleError: Module Error (from ./node_modules/html-loader/dist/cjs.js):
-  
-  - HtmlSourceError: Bad value for attribute "content" on element "meta": Must be non-empty (From line 12, column 41; to line 12, column 51)
-  
-  - NormalModule.js:706 Object.emitError
-    [sandbox-webpack]/[webpack]/lib/NormalModule.js:706:6
-  
-  - index.js:56 Object.loader
-    [sandbox-webpack]/[html-loader]/dist/index.js:56:10
+  - index.js:108 Object.ejsLoader
+    [webpack-template]/[template-ejs-loader]/lib/index.js:108:9
   
   - child-compiler.js:174 
-    [sandbox-webpack]/[html-webpack-plugin]/lib/child-compiler.js:174:18
+    [webpack-template]/[html-webpack-plugin]/lib/child-compiler.js:174:18
   
   - Compiler.js:627 finalCallback
-    [sandbox-webpack]/[webpack]/lib/Compiler.js:627:5
+    [webpack-template]/[webpack]/lib/Compiler.js:627:5
   
   - Compiler.js:662 
-    [sandbox-webpack]/[webpack]/lib/Compiler.js:662:11
+    [webpack-template]/[webpack]/lib/Compiler.js:662:11
   
   - Compiler.js:1348 
-    [sandbox-webpack]/[webpack]/lib/Compiler.js:1348:17
+    [webpack-template]/[webpack]/lib/Compiler.js:1348:17
   
   
   - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [sandbox-webpack]/[tapable]/lib/Hook.js:18:14
+    [webpack-template]/[tapable]/lib/Hook.js:18:14
   
   - Compiler.js:1344 
-    [sandbox-webpack]/[webpack]/lib/Compiler.js:1344:33
+    [webpack-template]/[webpack]/lib/Compiler.js:1344:33
   
   - Compilation.js:2925 finalCallback
-    [sandbox-webpack]/[webpack]/lib/Compilation.js:2925:11
+    [webpack-template]/[webpack]/lib/Compilation.js:2925:11
   
   - Compilation.js:3238 
-    [sandbox-webpack]/[webpack]/lib/Compilation.js:3238:11
+    [webpack-template]/[webpack]/lib/Compilation.js:3238:11
   
   
 </pre>
